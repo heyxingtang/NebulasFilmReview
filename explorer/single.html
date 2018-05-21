@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>single</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all"/>
+    <!-- //bootstrap -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' media="all"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--start-smoth-scrolling-->
+    <!-- fonts -->
+    <!-- //fonts -->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <h1>星云影评</h1>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="top-search">
+                <form class="navbar-form navbar-right" action="single.html" method="get">
+                    <input type="text" class="form-control" placeholder="请输入电影名称" name="q">
+                    <input type="submit" value="">
+                </form>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</nav>
+<div class="col-sm-3 col-md-2 sidebar">
+    <div class="top-navigation">
+        <div class="t-menu">MENU</div>
+        <div class="t-img">
+            <img src="images/lines.png" alt=""/>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="drop-navigation drop-navigation">
+        <ul class="nav nav-sidebar">
+            <li class="active">
+                <a href="index.html" class="home-icon">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>首页</a>
+            </li>
+            <li class="active"><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>我的评论</a></li>
+        </ul>
+
+    </div>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="show-top-grids">
+        <div class="col-sm-8 single-left">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2 id="movie_title"></h2>
+                    <br/>
+                    <br/>
+                    <h5>
+                        <b>导演：</b>
+                        <span id="movie_directors"></span>
+                    </h5>
+                    <br/>
+                    <br/>
+                    <h5>
+                        <b>主演：</b>
+                        <span id="movie_casts"></span>
+                    </h5>
+                    <br/>
+                    <br/>
+                    <h5>
+                        <b>类型：</b>
+                        <span id="movie_genres"></span>
+                    </h5>
+                    <br/>
+                    <br/>
+                    <h5>
+                        <b>评分：</b>
+                        <span id="movie_rating"></span>
+                    </h5>
+                    <br/>
+                    <br/>
+                    <h5>
+                        <b>年份：</b>
+                        <span id="movie_year"></span>
+                    </h5>
+                    <br/>
+                    <br/>
+                </div>
+                <div class="col-sm-3">
+                    <img alt="" id="movie_image"/>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="all-comments">
+                <div class="all-comments-info">
+                    <h3>发表评论</h3>
+                    <div class="box">
+                        <form>
+                            <textarea id="comment_text" placeholder="填写你的评论（不超过500字）" required></textarea>
+                            <input type="button" value="发送" onclick="comment_submit()">
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="media-grids" id="comment_list">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 single-right">
+            <h3>小编推荐</h3>
+            <div class="single-grid-right">
+                <div class="single-right-grids">
+                    <div class="col-md-4 single-right-grid-left">
+                        <a href="single.html?id=大鱼海棠">
+                            <img src="images/大鱼海棠.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-8 single-right-grid-right">
+                        <a href="single.html?id=大鱼海棠" class="title"> 大鱼海棠</a>
+                        <p class="author">爱一个人，攀一座山，追一个梦</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="single-right-grids">
+                    <div class="col-md-4 single-right-grid-left">
+                        <a href="single.html?id=仙剑奇侠传">
+                            <img src="images/仙剑奇侠传.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-8 single-right-grid-right">
+                        <a href="single.html?id=仙剑奇侠传" class="title"> 仙剑奇侠传</a>
+                        <p class="author">
+                           	心目中永远的逍遥哥哥和灵儿！
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="single-right-grids">
+                    <div class="col-md-4 single-right-grid-left">
+                        <a href="single.html?id=盗梦空间">
+                            <img src="images/盗梦空间.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-8 single-right-grid-right">
+                        <a href="single.html?id=盗梦空间" class="title"> 盗梦空间</a>
+                        <p class="author">
+                            卡梅隆负责革新电影技术，诺兰负责革新电影结构...
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="single-right-grids">
+                    <div class="col-md-4 single-right-grid-left">
+                        <a href="single.html?id=天才枪手">
+                            <img src="images/天才枪手.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-md-8 single-right-grid-right">
+                        <a href="single.html?id=天才枪手" class="title"> 天才枪手</a>
+                        <p class="author">
+                           青春不只是堕胎与恋爱，作弊才是学生时代的主题啊！
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-grids">
+
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+<div class="clearfix"></div>
+<div class="drop-menu">
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Regular link</a>
+        </li>
+        <li role="presentation" class="disabled">
+            <a role="menuitem" tabindex="-1" href="#">Disabled link</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Another link</a>
+        </li>
+    </ul>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/nebPay.js"></script>
+<script src="js/nebulas.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script>
+    const contractAddress = "n1gCBS2DzxBnDmC1T4VcEDGsbv3NgSWCVGv"
+    //const nebulas = require("nebulas");
+    //const neb = new nebulas.Neb(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+    const NebPay = require("nebpay"); //https://github.com/nebulasio/nebPay
+    const nebPay = new NebPay();
+    let movie_id = 0;
+    const to = contractAddress;
+    const value = "0";
+    
+    //to check if the extension is installed
+    //if the extension is installed, var "webExtensionWallet" will be injected in to web page
+    if (typeof (webExtensionWallet) === "undefined") {
+        alert("请先安装星云钱包插件.");
+    }
+
+
+    function load_single() {
+        let url = window.location.href;
+        let result = url.split("?")[1];
+        let movie_name = result.split("=")[1];
+        load_movie(movie_name);
+        // load_comment();
+    }
+
+    function load_movie(movie_name) {
+        let xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                let movie_get = JSON.parse(xmlhttp.responseText);
+                movie_id = movie_get.subjects[0].title;
+                let movie_casts = "";
+                let movie_directors = "";
+                let movie_genres = "";
+                let movie_rating;
+                let movie_year;
+
+                nebPay.simulateCall(to, value, "showMovieReview", "[\"" + movie_id + "\"]", {
+                    listener: refreshPage
+                });
+
+                document.getElementById("movie_image").setAttribute('src', movie_get.subjects[0].images.large);
+
+                document.getElementById("movie_title").innerHTML = movie_get.subjects[0].title;
+
+                for (let i = 0; i < movie_get.subjects[0].directors.length; i++) {
+                    movie_directors += movie_get.subjects[0].directors[i].name;
+                    if (i !== movie_get.subjects[0].directors.length - 1) {
+                        movie_directors += '/'
+                    }
+                }
+                document.getElementById("movie_directors").innerHTML = movie_directors;
+
+                for (let i = 0; i < movie_get.subjects[0].casts.length; i++) {
+                    movie_casts += movie_get.subjects[0].casts[i].name;
+                    if (i !== movie_get.subjects[0].casts.length - 1) {
+                        movie_casts += '/'
+                    }
+                }
+                document.getElementById("movie_casts").innerHTML = movie_casts;
+
+                for (let i = 0; i < movie_get.subjects[0].genres.length; i++) {
+                    movie_genres += movie_get.subjects[0].genres[i];
+                    if (i !== movie_get.subjects[0].genres.length - 1) {
+                        movie_genres += '/'
+                    }
+                }
+
+                document.getElementById("movie_genres").innerHTML = movie_genres;
+                document.getElementById("movie_rating").innerHTML = movie_get.subjects[0].rating.average;
+                document.getElementById("movie_year").innerHTML = movie_get.subjects[0].year;
+            }
+        }
+        xmlhttp.open("POST", "http://39.106.56.119:80/load_single", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("q=" + movie_name);
+    }
+
+    function comment_submit() {
+        let comment = document.getElementById('comment_text').value;
+		if(comment.length == 0 || comment.length > 500){
+			alert("请重新输入");
+			document.getElementById('comment_text').value="";
+		}
+		else{
+			let funcName = "addReview";
+			let funcArgs = "[\"" + movie_id + "\",\"" + comment.trim() + "\"]";
+        	nebPay.call(to, value, funcName, funcArgs, {
+				listener: hintMessage,
+        	});
+		}
+    }
+
+    function hintMessage(resp) {
+        // let txhash = resp.txhash;
+        alert("添加成功，请刷新页面！");
+
+    }
+
+    function load_comment() {
+        //alert(movie_id);
+        nebPay.simulateCall(to, value, "showMovieReview", "[\"" + movie_id + "\"]", {
+            listener: refreshPage
+        });
+    }
+
+    function refreshPage(resp) {
+        let comment_obj = JSON.parse(resp.result);
+        //alert(JSON.stringify(obj));
+        let comment_list = "";
+		for(var i=0;i<=comment_obj.num-1;i++){
+			let comment_timer = new Date(comment_obj.data[i].ts * 1000).toLocaleString();
+			comment_list += "<div class=\"media\"><h5>" + comment_obj.data[i].from + "</h5> <div class=\"media-left\"><a href=\"#\"></a></div>"
+			+ "<div class=\"media-body\"><p>"+comment_obj.data[i].content + "</p><span>" + comment_timer
+			+ "</span></div></div>"
+		}
+        document.getElementById("comment_list").innerHTML = comment_list;
+        
+    }
+
+    window.onload = (load_single());
+</script>
+</body>
+
+</html>

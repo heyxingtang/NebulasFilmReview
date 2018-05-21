@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
+<!-- //bootstrap -->
+<link href="css/dashboard.css" rel="stylesheet">
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--start-smoth-scrolling-->
+<!-- fonts -->
+<!-- //fonts -->
+</head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><h1>星云影评</h1></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+			<div class="top-search">
+				<form class="navbar-form navbar-right" action="single.html" method="get">
+					<input type="text" class="form-control" placeholder="请输入电影名称" name="q" required>
+					<input type="submit" value="">
+				</form>
+			</div>
+        </div>
+		<div class="clearfix"> </div>
+      </div>
+    </nav>
+	<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" ></a></div>
+        <div class="col-sm-3 col-md-2 sidebar">
+			<div class="top-navigation">
+				<div class="t-menu">MENU</div>
+				<div class="t-img">
+					<img src="images/lines.png" alt="" />
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+				<div class="drop-navigation drop-navigation">
+				  <ul class="nav nav-sidebar">
+					<li class="active"><a href="#" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>首页</a></li>
+					<li><a href="#on_movie" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>正在热映</a></li>
+					<li><a href="#top_movie" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>高分电影</a></li>
+					<li class="active"><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>我的评论</a></li>
+				  </ul>
+				  <!-- script-for-menu -->
+						<script>
+							$( ".top-navigation" ).click(function() {
+							$( ".drop-navigation" ).slideToggle( 300, function() {
+							// Animation complete.
+							});
+							});
+						</script>
+				</div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="main-grids">
+				<div class="top-grids">
+					<div class="recommended-grids">
+						<div class="recommended-info">
+							<h3 id="on_movie">正在热映</h3>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing1_href"><img  alt="" id="showing1_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing1_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing2_href"><img  alt="" id="showing2_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing2_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing3_href"><img  alt="" id="showing3_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing3_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing4_href"><img  alt="" id="showing4_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing4_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing5_href"><img  alt="" id="showing5_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing5_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing6_href"><img  alt="" id="showing6_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing6_name"></a></h3>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="recommended-grids">
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing7_href"><img  alt="" id="showing7_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing7_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing8_href"><img  alt="" id="showing8_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing8_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing9_href"><img  alt="" id="showing9_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing9_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing10_href"><img  alt="" id="showing10_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing10_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing11_href"><img  alt="" id="showing11_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing11_name"></a></h3>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid slider-top-grids">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="showing12_href"><img  alt="" id="showing12_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info">
+								<h3><a class="title title-info" id="showing12_name"></a></h3>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="recommended">
+					<div class="recommended-grids" id="top_1">
+						<div class="recommended-info">
+							<h3 id="top_movie">高分电影</h3>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top1_href"><img alt="" id="top1_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top1_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top2_href"><img alt="" id="top2_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top2_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top3_href"><img alt="" id="top3_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top3_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top4_href"><img alt="" id="top4_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top4_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top5_href"><img alt="" id="top5_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top5_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top6_href"><img alt="" id="top6_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top6_name"></a></h5>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="recommended-grids" id="top_1">
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top7_href"><img alt="" id="top7_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top7_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top8_href"><img alt="" id="top8_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top8_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top9_href"><img alt="" id="top9_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top9_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top10_href"><img alt="" id="top10_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top10_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top11_href"><img alt="" id="top11_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top11_name"></a></h5>
+							</div>
+						</div>
+						<div class="col-md-2 resent-grid recommended-grid">
+							<div class="resent-grid-img recommended-grid-img">
+								<a id="top12_href"><img alt="" id="top12_img" height="350"/></a>
+							</div>
+							<div class="resent-grid-info recommended-grid-info video-info-grid">
+								<h5><a class="title" id="top12_name"></a></h5>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				
+			</div>
+			<!-- //footer -->
+		</div>
+		<div class="clearfix"> </div>
+	<div class="drop-menu">
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+		  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
+		  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+		  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>
+		</ul>
+	</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script>
+		function load_index(){
+			load_showing();
+			load_top();
+		}
+		function load_showing(){
+			var xmlhttp;
+			if(window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}
+			else{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			xmlhttp.onreadystatechange = function(){
+				if (xmlhttp.readyState==4 && xmlhttp.status==200){
+					var showing_get = JSON.parse(xmlhttp.responseText);
+					for(var i=1;i<=12;i++){
+						var href = "showing" + i +"_href";
+						var name = "showing" + i +"_name";
+						var img = "showing" + i +"_img";
+						document.getElementById(href).setAttribute('href',"single.html?id="+showing_get.subjects[i-1].title);
+						document.getElementById(name).setAttribute('href',"single.html?id="+showing_get.subjects[i-1].title);
+						document.getElementById(img).setAttribute('src',showing_get.subjects[i-1].images.large);
+						document.getElementById(name).innerHTML=showing_get.subjects[i-1].title;
+					}
+				}
+			}
+			//xmlhttp.open("GET","//localhost:80/theaters",true);
+			xmlhttp.open("GET", "http://39.106.56.119:80/in_theaters", true);
+			xmlhttp.send();
+		}
+		function load_top(){
+			var xmlhttp;
+			if(window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}
+			else{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			xmlhttp.onreadystatechange = function(){
+				if (xmlhttp.readyState==4 && xmlhttp.status==200){
+					var top_get = JSON.parse(xmlhttp.responseText);
+					var top1 = "<div class=\"recommended-info\"><h3 id=\"top_movie\">高分电影</h3></div>";
+					for(var i=1;i<=12;i++){
+						var href = "top" + i +"_href";
+						var name = "top" + i +"_name";
+						var img = "top" + i +"_img";
+						//top1 += "<div class=\"col-md-3 resent-grid recommended-grid\"><div class=\"resent-grid-img recommended-grid-img\"><a href=\"single.html?id=" + top_get.subjects[i-1].title + "\"><img src=\"" + top_get.subjects[i-1].images.large +"\" height=\"560\"/></a></div><div class=\"resent-grid-info recommended-grid-info video-info-grid\"><h5><a class=\"title\" href=\"single.html?id="+top_get.subjects[i-1].title+"\"></a>" +top_get.subjects[i-1].title+ "</h5></div></div>";
+						
+						document.getElementById(href).setAttribute('href',"single.html?id="+top_get.subjects[i-1].title);
+						document.getElementById(name).setAttribute('href',"single.html?id="+top_get.subjects[i-1].title);
+						document.getElementById(img).setAttribute('src',top_get.subjects[i-1].images.large);
+						document.getElementById(name).innerHTML=top_get.subjects[i-1].title;
+					}
+					//top1 += "<div class=\"clearfix\"> </div>";
+					//alert(top1);
+					//document.getElementById(top_1).innerHTML=top1;
+				}
+			}
+			//xmlhttp.open("GET","//localhost:80/theaters",true);
+			xmlhttp.open("GET", "http://39.106.56.119:80/top", true);
+			xmlhttp.send();
+		}
+		window.onload = load_index();
+	</script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "nebulasreview",
+  "version": "1.0.0",
+  "description": "the film review dapp on nebulas blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dapp",
+    "neb",
+    "film-review"
+  ],
+  "author": "bupt",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.86.0"
+  }
+}
