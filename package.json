@@ -1,21 +1,22 @@
 {
-  "name": "nebulasreview",
+  "name": "nebulas_review",
   "version": "1.0.0",
-  "description": "the film review dapp on nebulas blockchain",
+  "description": "the film review dapp in nebulas blockchain~ ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "dapp",
-    "neb",
-    "film-review"
+    "review"
   ],
-  "author": "bupt",
+  "author": "xxt",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "request": "^2.86.0"
+    "nebpay.js": "^0.1.0",
+    "nebulas": "^0.5.0",
+    "request": "^2.86.0",
+    "urlencode": "^1.1.0"
   }
 }

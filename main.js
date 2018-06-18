@@ -1,52 +1,76 @@
 'use strict';
-var path = require('path');
-var util = require('util');
-var express = require('express');
-var requests = require('request');
-var bodyParser = require('body-parser');
-var app = express();
-var http= require('http').Server(app);
-var host = process.env.HOST || "localhost";
-var port = process.env.PORT || 8080;
-app.use(express.static("./explorer"));
-//app.use(express.static(path.join(__dirname,'explorer')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/in_theaters", function (req, res)
-{
-    console.log("receive requests")
-    requests('https://api.douban.com/v2/movie/in_theaters', function(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                res.send(body);
-            }
-        });
+const Nebulas = require("nebulas");
+const Account = Nebulas.Account;
+const neb = new Nebulas.Neb(new Nebulas.HttpRequest("https://testnet.nebulas.io"));
+const api = neb.api;
+const NebPay = require("nebpay.js");
+const nebPay = new NebPay();
+const contractAddress = "n1s1xEHZcMydu7EaQ3aQVhP3VG8E61ibsjX";
+
+function isInteger(x) {
+    return (typeof x === 'number') && (x % 1 === 0);
 }
-)
 
-app.get("/top", function (req, res)
-{
-    console.log("receive requests")
-    requests('https://api.douban.com/v2/movie/top250', function(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                res.send(body);
-            }
-        });
+function getAccountNonce(addr, callback) {
+    api.getAccountState(addr).then(function (state) {
+        callback(null, state['nonce'] - 0);
+    }).catch(function (err) {
+        console.log("error in get account nonce:" + err.message);
+    });
 }
-)
 
-app.post("/load_single", function (req, res)
-{
-    console.log("收到请求内容:"+JSON.stringify(req.body));
-    requests.post({url:'https://api.douban.com/v2/movie/search', form:{q:req.body.q}}, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            res.send(body);
-        }
-    })
+function listener(resp) {
+    console.log('==================================');
+    console.log("resp: " + JSON.stringify(resp));
+
 }
-)
 
-var server = http.listen(80, function() {
-    //console.log(`Please open Internet explorer to access ：http://${host}:${port}/`);
-    console.log("server start");
-});
+function addReview(id, content, callback) {
+    if (isInteger(id - 0)) {
+        callback(new Error("Illegal movie id"));
+    }
+
+    if (content.length > 128) {
+        callback(new Error("Review exceed limit length"));
+    }
+
+    let serialNumber = nebPay.call(contractAddress, 0, "addReview", [id, content], {
+        listener: listener,
+    });
+
+    callback(null, serialNumber);
+
+}
+
+// api.getAccountState("n1Ja9ptL1f2YAM3CkJ5Nxj2A9SRfJYRiPXp").then(function (state) {
+//     console.log(state);
+// }).catch(function (err) {
+//     console.log(err);
+// });
+//
+// api.getNebState().then(function (state) {
+//     console.log(state);
+// }).catch(function (err) {
+//     console.log("error in getNebState" + err.message);
+// });
+// getAccountNonce("n1Ja9ptL1f2YAM3CkJ5Nxj2A9SRfJYRiPXp", function (err, nonce) {
+//     if (err) {
+//         console.log('err in call getAccountNonce:' + err.message);
+//         return;
+//     }
+//     console.log(nonce);
+// });
+
+addReview("123456", "hhhhhhhhhhhhhhhhh", function (err, serialNumber) {
+    if (err) {
+        console.log('err in call addreview:' + err.message);
+        return;
+    }
+
+    nebPay.queryPayInfo(serialNumber).then(function (resp) {
+        console.log(resp);
+    }).catch(function (err) {
+        console.log(err);
+    });
+})
