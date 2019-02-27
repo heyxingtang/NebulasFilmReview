@@ -15,7 +15,7 @@ node -v   #检测是否安装成功
 
 ###  获取代码 
 ```shell
-git clone git@github.com:keimuji/NebulasFilmReview.git 
+git clone git@github.com:heyxingtang/NebulasFilmReview.git 
 
 cd NebulasFilmReview
 ```
